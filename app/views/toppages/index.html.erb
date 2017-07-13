@@ -11,4 +11,7 @@
   </div>
 <% end %>
 
-<%= render 'items/items', items: @items %>
+<% if logged_in? %>
+<h3>みんなが出会ったモノ</h3>
+  <%= render 'items/items', items: @items %>
+<% end %>
